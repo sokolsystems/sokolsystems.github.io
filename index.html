@@ -12,22 +12,46 @@
     <link rel="stylesheet" href="pqgrid/themes/office/pqgrid.css" />
 
 <script>
+
     $(function () {
-		$.getJSON('./file.json', function(data) {
-			var obj = { width: 700, height: 400, title: "ParamQuery Grid Example",resizable:true,draggable:true };
+		$.getJSON('positions.json', function(data) {
+		
+			var rows = converFromJson(data);
+			
+			var obj = { width:980, height:900, title:"Current Positions", resizable:false, draggable:false };
 			
 			obj.colModel = [
-			{ title: "Rank", width: 100, dataType: "integer" },
-			{ title: "Company", width: 200, dataType: "string" },
-			{ title: "Revenues ($ millions)", width: 150, dataType: "float", align: "right" },
-			{ title: "Profits ($ millions)", width: 150, dataType: "float", align: "right"}];
+			{ title: "Position Date", width: 100, dataType: "string", editable: false },
+			{ title: "LE Code", width: 50, dataType: "string", editable: false },
+			{ title: "Client Or Depo Code", width: 100, dataType: "string", editable: false },
+			{ title: "Account Type", width: 100, dataType: "string", editable: false },
+			{ title: "Position Type", width: 50, dataType: "string", editable: false },
+			{ title: "Asset Type", width: 100, dataType: "string", editable: false },
+			{ title: "Instrument ID", width: 100, dataType: "string", editable: false },
+			{ title: "Position Bucket", width: 200, dataType: "string", editable: false },
+			{ title: "Quantity", width: 100, dataType: "float", align: "right", editable: false}];
 			
-			obj.dataModel = { data: data };
+			obj.scrollModel = {horizontal : false};			
+			obj.dataModel = { data: rows };
+			
 			$("#grid_array").pqGrid(obj);
 		});
     });
-
-        
+	
+	function converFromJson(data) {
+		var rows = [];
+		$.each( data.positions, function( key, val ) {
+			$.each( val, function( k, v ) {
+				var row = [];
+				$.each(v, function( k1, v1 ) {
+					row.push(v1);
+				});
+				rows.push(row);
+			});
+		});
+		return rows;	
+	}
+		
 </script>    
 </head>
 <body>

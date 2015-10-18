@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sokol Systems : Functionality</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="css/animate.min.css" rel="stylesheet" media="screen">
+    <link href="css/lightbox.css" rel="stylesheet" media="screen">
+    <link href="css/syntax/shCore.css" rel="stylesheet"  media="screen">
+    <link href="css/syntax/shThemeDefault.css" rel="stylesheet"  media="screen">
+
+
+    <link href="css/style.css" rel="stylesheet" media="screen" title="default">
+    <link href="css/color-red.css" rel="stylesheet" media="screen" title="default">
+    <link href="css/width-full.css" rel="stylesheet" media="screen" title="default">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="boxed animated fadeIn animation-delay-5">
+
+        <header id="header" class="hidden-xs">
+            <div class="container">
+                <div id="header-title">
+                    <h1 class="animated fadeInDown"><a href="index.html">Sokol <span>Systems</span></a></h1>
+                </div>
+            </div> <!-- container -->
+        </header> <!-- header -->
+
+        <nav class="navbar navbar-static-top navbar-mind" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="index.html">Sokol <span>Systems</span></a>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-mind-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars fa-inverse"></i>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-mind-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="performance.html">Performance</a>
+                        </li>
+                        <li>
+                            <a href="cost.html">Cost</a>
+                        </li>
+                        <li>
+                            <a href="quality.html">Quality</a>
+                        </li>
+                        <li>
+                            <a href="capacity.html">Capacity</a>
+                        </li>
+                        <li>
+                            <a href="resiliency.html">Resiliency</a>
+                        </li>
+                        <li>
+                            <a href="functionality.html">Functionality</a>
+                        </li>
+                    </ul> <!-- nav nabvar-nav -->
+                </div><!-- navbar-collapse -->
+            </div> <!-- container -->
+        </nav> <!-- navbar navbar-default -->
+
+        <header class="wrap-title">
+            <div class="container">
+                <h1 class="page-title">Functionality</h1>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="img/w2.jpg" class="thumbnail margin-bottom-20" data-lightbox="w1" title="My cassption">
+                        <img src="img/w2.jpg" class="img-responsive" alt="Image">
+                    </a>
+                    <div class="row">
+                         <div class="col-md-6">
+                            <a href="img/w8.jpg" class="thumbnail margin-bottom-20" data-lightbox="w1" title="My caption">
+                                <img src="img/w8.jpg" class="img-responsive" alt="Image">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="img/w9.jpg" class="thumbnail margin-bottom-20" data-lightbox="w1" title="My cassption">
+                                <img src="img/w9.jpg" class="img-responsive" alt="Image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p><b>Sokol Systems’ Asset Record combines the functional richness of three common back office
+                        systems: client positions and balances, cash records and balances, firm inventory system.
+                        By bringing these three systems together we were able to eliminate unnecessary data integrity
+                        controls which would normally be required to maintain data quality of back office.</b>
+                    </p>
+                    <p>Double entry integrity controls were built into the product’s core. As a result, the quality
+                        and integrity of the Asset Record is never compromised. At the same time, the behaviour of
+                        the double entry integrity is fully customizable through the implementation of custom journal
+                        postings modules.</p>
+                    <p>Flexible journalling rules - At Sokol Systems, we focused on implementing  the necessary ability
+                        to expand product coverage of the engine with minimal effort (from a couple of hours to a couple
+                        of days). As a result, the engine offers complete freedom to define how the incoming transactions
+                        of different types and classifications should be processed. The included with the product equity
+                        buy/sell and settlement journalling components provide a fully functional reference implementation.
+                        High performance open source rules engine is utilized to simplify the journalling component
+                        selection for a specific legal entity, instrument type and transaction type.</p>
+                    <p>Asset Record Engine explicitly defines and reliably maintains the following standard position buckets:
+                        <ul>
+                            <li>start of day traded quantities</li>
+                            <li>current traded quantities</li>
+                            <li>value date start of day quantities</li>
+                            <li>current value date quantities</li>
+                            <li>start of day settled quantities</li>
+                            <li>current settled quantities</li>
+                            <li>future (T + X) dated settlement projections.</li>
+                        </ul>
+                        These quantities are computed wholistically, complete referential data integrity across all
+                        these quantities is maintained by the processing engine. The position changes are recorded
+                        into the position store as a single operation preventing any inconsistency between these quantities.</p>
+                    <p>Standard settlement data points are automatically computed by The Asset  Record Engine. It
+                        performs the necessary calculations related to settlement projections and keeps track of the
+                        future settlement quantities based on the settlement dates provided on the incoming transactions
+                        and the market calendar details. Settlement position quantities are automatically calculated as
+                        "contractually settled" on the settlement date. Settlement postings are computed by a special
+                        component that is specifically designed to handle various settlement events.<br />
+                        Both Depot and Nostro movements are supported and implemented as standard features of the engine.
+                        The only necessary customization to support cash Nostro and stock Depot movements is in the
+                        implementation of the settlement journalling component (reference implementation is provided
+                        and can be used without any changes).</p>
+                    <p>Sokol Systems’ Asset Record Engine has a sophisticated mechanism to instantaneously compute
+                        position quantities with (as-of) and without (as-at) impact by backdated trades (adjustments)
+                        in real time with no performance degradation.</p>
+                    <p>Asset Record Engine provides an ultra high performance snapshot capability. A full snapshot of
+                        the live position store can be taken with a single command. The system doesn’t even need to be
+                        shut down. The integrity of the datastore is ensured by the engine. The position store snapshot
+                        contains all the current positions including market business day information for every market
+                        in the system.</p>
+                    <p>The Asset Record Engine is a multi-market system capable of real-time processing of business
+                        events from all markets across the world. It employs open source calendar libraries to reliably
+                        compute settlement projections and perform various business date calculations. Since, every
+                        financial institution has its own business calendar maintained in some reference data catalogs,
+                        Asset Record Engine provides flexibility to define and configure market holidays. No separate
+                        software deployment is required, the new version of the country or market specific configuration
+                        files is picked up by the running engine automatically.</p>
+                    <p>Sokol Systems’ Asset Record is designed from the ground as a single business solution to handle
+                        all Client, Broker and Firm stock and cash positions. The consistency of the data between
+                        Client, Firm, Broker, Stock and Cash is built into the journal posting logic and can be easily
+                        augmented by providing multiple pluggable implementations of the journalling components.</p>
+                    <p>The Asset Record Engine implements a configurable multi-market end-of-day processing.
+                        End-of-day process can be initiated on demand by sending a command to the engine or configured
+                        to be performed automatically at a specific time. When the system receives an end-of-day
+                        request, it switches to the next business day instantaneously, but also, takes a full
+                        end-of-day snapshot of the complete position store.<br />
+                        Once end-of-day event for a specific market is processed, any incoming transactions for that
+                        market are processed with a new business date. In case a trade was delayed and the end-of-day
+                        event happened before all the trades for the day were processed, these trades will be handled
+                        as back-dated adjustments (see As-Of and As-At processing).</p>
+                </div>
+            </div>
+        </div> <!-- container  -->
+
+        <aside id="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="footer-widget-title">Sitemap</h3>
+                        <ul class="list-unstyled three_cols">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="performance.html">Performance</a></li>
+                            <li><a href="cost.html">Cost</a></li>
+                            <li><a href="quality.html">Quality</a></li>
+                            <li><a href="capacity.html">Capacity</a></li>
+                            <li><a href="resiliency.html">Resiliency</a></li>
+                            <li><a href="functionality.html">Functionality</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </aside> <!-- footer-widgets -->
+
+        <footer id="footer">
+            <p>&copy; 2015 <a href="index.html">Sokol Systems</a>, inc. All rights reserved.</p>
+        </footer>
+
+    </div> <!-- boxed -->
+
+
+    <div id="back-top">
+        <a href="#header"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/lightbox-2.6.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/styleswitcher.js"></script>
+
+    <script src="js/syntax/shCore.js"></script>
+    <script src="js/syntax/shBrushXml.js"></script>
+    <script src="js/syntax/shBrushJScript.js"></script>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+</body>
+
+</html>

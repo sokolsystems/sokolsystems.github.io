@@ -126,7 +126,8 @@
                             <li>current value date quantities</li>
                             <li>start of day settled quantities</li>
                             <li>current settled quantities</li>
-                            <li>future (T + X) dated settlement projections.</li>
+                            <li>future (T + X) dated settlement projections</li>
+							<p><i><b>Note:</b> Value date is the contractual settlement date and settled date is the actual settlement date</i></p>
                         </ul>
                         These quantities are computed wholistically, complete referential data integrity across all
                         these quantities is maintained by the processing engine. The position changes are recorded
@@ -139,6 +140,10 @@
                         and the market calendar details. Settlement position quantities are automatically calculated as
                         "contractually settled" on the settlement date. Settlement postings are computed by a special
                         component that is specifically designed to handle various settlement events.<br />
+						Value dated position quantities are automatically calculated as “contractually settled” on the 
+						settlement date of the transaction. Value  dated postings are computed by a special component 
+						that is specifically designed to handle various settlement events. Settlement position quantities 
+						are calculated when the transaction actually settles.<br />
                         Both Depot and Nostro movements are supported and implemented as standard features of the engine.
                         The only necessary customization to support cash Nostro and stock Depot movements is in the
                         implementation of the settlement journalling component (reference implementation is provided
